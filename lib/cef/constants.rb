@@ -126,6 +126,8 @@ module CEF
     :oldfsize                     => "oldfsize",
     :oldfileType                  => "oldfileType",
 
+    :reason                       => "reason",
+
     :requestURL                   => "request",
     :requestClientApplication     => "requestClientApplication",
     :requestCookies               => "requestCookies",
