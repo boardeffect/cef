@@ -88,7 +88,7 @@ module CEF
           %r{(\||\\)} => '\\\\\&'
         }
         escapes.reduce(val) do|memo,replace|
-          memo=memo.gsub(*replace)
+          memo=memo.to_s.gsub(*replace)
         end
       end
 
@@ -97,11 +97,10 @@ module CEF
       def escape_extension_value(val)
         escapes = {
           %r{=}  => '\=',
-          %r{\n} => ' ',
           %r{\\} => '\\'
         }
         escapes.reduce(val) do |memo,replace|
-          memo=memo.gsub(*replace)
+          memo=memo.to_s.gsub(*replace)
         end
       end
 
