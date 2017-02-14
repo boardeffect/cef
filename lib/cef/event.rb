@@ -97,6 +97,7 @@ module CEF
       def escape_extension_value(val)
         escapes = {
           %r{=}  => '\=',
+          %r{\n} => '\n',
           %r{\\} => '\\'
         }
         escapes.reduce(val) do |memo,replace|
